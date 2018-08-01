@@ -1,0 +1,61 @@
+
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">
+      <mat-icon>gesture</mat-icon> &nbsp;APP Name
+    </mat-toolbar>
+    <mat-nav-list>
+      <!-- User Profile -->
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>person</mat-icon> &nbsp; <span class="zippy__user__name">Bienvenido <b>Sysadmin</b></span>
+      </mat-panel-title>
+      
+    </mat-expansion-panel-header>
+      <mat-list role="list">
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem"><mat-icon>assignment_ind</mat-icon> &nbsp;Perfil de Usuario</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item role="listitem"><mat-icon>directions_run</mat-icon> &nbsp;Cerrar sesión</mat-list-item>
+        <mat-divider></mat-divider>
+       
+      </mat-list>
+
+     <!-- Content Goes Here -->
+  </mat-expansion-panel>
+  </mat-accordion>
+
+      <a [routerLink]="['dashboard']" mat-list-item href="#">
+        <mat-icon matListIcon>dashboard</mat-icon>Dashboard</a>
+        <a [routerLink]="['table']" mat-list-item href="#">
+          <mat-icon matListIcon>person</mat-icon>Usuario</a>
+      <a mat-list-item href="#">Link 3</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  
+  <mat-sidenav-content style="overflow:hidden;">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>
+        <!--here comes routing title -->
+         {{ getTitle() }}
+      </span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div class="zippy--router-outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+
+    
+  
+
+</mat-sidenav-container>
