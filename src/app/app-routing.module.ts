@@ -5,7 +5,7 @@ import { DashboardModule } from 'src/app/modules/dashboard/dashboard.module';
 
 import { DashboardComponent } from 'src/app/modules/dashboard/dashboard/dashboard.component';
 import { InitComponent } from 'src/app/modules/dashboard/init/init.component';
-import { MyTableComponent } from 'src/app/my-table/my-table.component';
+import { TableComponent } from 'src/app/modules/table/table/table.component';
 
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
       },
       {
         path: 'table',
-        component: MyTableComponent
+        component: TableComponent
       }
     ]
   }

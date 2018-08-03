@@ -8,11 +8,13 @@ import { RouterModule } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { InitComponent } from './init/init.component';
+import { TableModule } from 'src/app/modules/table/table.module';
  @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    TableModule
   ],
   exports: [
     TopbarComponent,

@@ -1,6 +1,10 @@
 import {
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule,
+    MatTableDataSource,
+    MatPaginator,
+    MatSort
 } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -24,7 +28,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule
   ],
   exports: [
     MatGridListModule,
@@ -35,7 +42,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTableModule
   ]
 })
 export class MaterialModule {}

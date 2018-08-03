@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
-import { MyTableDataSource } from './my-table-datasource';
 import {MatTableDataSource} from '@angular/material';
 
 
@@ -26,11 +25,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 ];
 
 @Component({
-  selector: 'app-my-table',
-  templateUrl: './my-table.component.html',
-  styleUrls: ['./my-table.component.css']
+  selector: 'app-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.css']
 })
-export class MyTableComponent implements OnInit {
+export class TableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];

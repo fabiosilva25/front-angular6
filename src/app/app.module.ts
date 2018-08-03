@@ -9,12 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { DashboardModule } from 'src/app/modules/dashboard/dashboard.module';
 import { RouterModule } from '@angular/router';
-import { MyTableComponent } from './my-table/my-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { TableModule } from 'src/app/modules/table/table.module';
 @NgModule({
   declarations: [
     AppComponent,
-    MyTableComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +24,8 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
     RouterModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
